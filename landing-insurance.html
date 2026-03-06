@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ירון אמיר | שמאי רכוש – מול הביטוח</title>
+  <!-- Open Graph / Social Preview -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="ירון אמיר | שמאי רכוש – מול הביטוח">
+  <meta property="og:description" content="חברת הביטוח שולחת שמאי שלה — שלח אחד משלך. 15 שנות ניסיון. שיחה ראשונה בחינם. 050-3292066">
+  <meta property="og:image" content="https://YOUR-USERNAME.github.io/og-image.svg">
+  <meta property="og:locale" content="he_IL">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ירון אמיר | שמאי רכוש">
+  <meta name="twitter:description" content="חברת הביטוח שולחת שמאי שלה — שלח אחד משלך. 050-3292066">
+  <meta name="twitter:image" content="https://YOUR-USERNAME.github.io/og-image.svg">
+  <meta name="description" content="שמאי רכוש מוסמך. 15 שנות ניסיון. נזקי מים, שריפות, פריצות. כל הארץ. 050-3292066">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --black:#0a0b0f;
+  --dark:#111318;
+  --card:#161920;
+  --border:rgba(255,255,255,.07);
+  --gold:#f0a500;
+  --gold2:#ffc84a;
+  --text:#f0efe8;
+  --muted:#8a8f9e;
+  --subtle:#3a3f4e;
+}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--black);
+  color:var(--text);
+  font-family:'Heebo',sans-serif;
+  line-height:1.6;
+  overflow-x:hidden;
+}
+
+/* ── NOISE TEXTURE OVERLAY ── */
+body::before{
+  content:'';
+  position:fixed;inset:0;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events:none;z-index:0;opacity:.4;
+}
+
+/* ── NAV ── */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  padding:18px 5%;
+  display:flex;align-items:center;justify-content:space-between;
+  background:rgba(10,11,15,.85);
+  backdrop-filter:blur(20px);
+  border-bottom:1px solid var(--border);
+  transition:all .3s;
+}
+.nav-logo{display:flex;align-items:center;gap:10px;}
+.logo-mark{
+  width:38px;height:38px;background:var(--gold);border-radius:9px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:15px;font-weight:900;color:#0a0b0f;letter-spacing:-.5px;
+  flex-shrink:0;
+}
+.nav-name{font-size:15px;font-weight:700;color:var(--text);}
+.nav-title{font-size:10px;color:var(--gold);font-weight:600;letter-spacing:.08em;text-transform:uppercase;}
+.nav-cta{
+  background:var(--gold);color:#0a0b0f;
+  padding:10px 22px;border-radius:8px;
+  font-size:13px;font-weight:800;text-decoration:none;
+  transition:all .2s;white-space:nowrap;
+}
+.nav-cta:hover{background:var(--gold2);transform:translateY(-1px);}
+
+/* ── HERO ── */
+.hero{
+  min-height:100vh;
+  display:flex;align-items:center;justify-content:center;
+  padding:120px 5% 80px;
+  position:relative;
+  overflow:hidden;
+}
+.hero-bg{
+  position:absolute;inset:0;
+  background:
+    radial-gradient(ellipse 80% 60% at 50% 0%, rgba(240,165,0,.08) 0%, transparent 70%),
+    radial-gradient(ellipse 50% 40% at 80% 50%, rgba(240,165,0,.04) 0%, transparent 60%);
+}
+.hero-grid{
+  position:absolute;inset:0;
+  background-image:
+    linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+  background-size:60px 60px;
+  mask-image:radial-gradient(ellipse 70% 60% at 50% 40%, black 0%, transparent 80%);
+}
+.hero-inner{
+  position:relative;z-index:1;
+  max-width:780px;width:100%;
+  text-align:center;
+}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(240,165,0,.1);border:1px solid rgba(240,165,0,.25);
+  color:var(--gold);font-size:12px;font-weight:700;
+  padding:7px 16px;border-radius:30px;letter-spacing:.06em;
+  margin-bottom:32px;
+  animation:fadeUp .6s ease both;
+}
+.hero-badge-dot{width:6px;height:6px;border-radius:50%;background:var(--gold);animation:pulse 2s infinite;}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1);}50%{opacity:.5;transform:scale(1.3);}}
+
+.hero h1{
+  font-size:clamp(36px,6vw,72px);
+  font-weight:900;
+  line-height:1.1;
+  margin-bottom:12px;
+  animation:fadeUp .7s .1s ease both;
+}
+.hero h1 em{
+  font-style:normal;
+  color:var(--gold);
+  position:relative;
+}
+.hero h1 em::after{
+  content:'';
+  position:absolute;bottom:-4px;left:0;right:0;
+  height:3px;background:var(--gold);border-radius:2px;
+  opacity:.5;
+}
+.hero-sub{
+  font-size:clamp(16px,2.5vw,20px);
+  color:var(--muted);
+  max-width:560px;margin:0 auto 48px;
+  font-weight:400;line-height:1.7;
+  animation:fadeUp .7s .2s ease both;
+}
+.hero-sub strong{color:var(--text);font-weight:600;}
+
+.hero-actions{
+  display:flex;gap:14px;justify-content:center;flex-wrap:wrap;
+  animation:fadeUp .7s .3s ease both;
+}
+.btn-primary{
+  background:var(--gold);color:#0a0b0f;
+  padding:15px 32px;border-radius:10px;
+  font-size:15px;font-weight:800;text-decoration:none;
+  transition:all .25s;display:inline-flex;align-items:center;gap:8px;
+}
+.btn-primary:hover{background:var(--gold2);transform:translateY(-2px);box-shadow:0 12px 32px rgba(240,165,0,.25);}
+.btn-secondary{
+  background:transparent;color:var(--text);
+  border:1px solid var(--border);
+  padding:15px 32px;border-radius:10px;
+  font-size:15px;font-weight:600;text-decoration:none;
+  transition:all .25s;display:inline-flex;align-items:center;gap:8px;
+}
+.btn-secondary:hover{border-color:rgba(255,255,255,.2);background:rgba(255,255,255,.04);}
+
+.hero-stats{
+  display:flex;gap:0;justify-content:center;
+  margin-top:72px;
+  border:1px solid var(--border);border-radius:16px;
+  overflow:hidden;
+  animation:fadeUp .7s .4s ease both;
+  max-width:520px;margin-inline:auto;margin-top:64px;
+}
+.hero-stat{
+  flex:1;padding:22px 20px;text-align:center;
+  border-left:1px solid var(--border);
+}
+.hero-stat:last-child{border-left:none;}
+.hero-stat-num{font-size:28px;font-weight:900;color:var(--gold);}
+.hero-stat-label{font-size:12px;color:var(--muted);margin-top:3px;}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:translateY(0);}}
+
+/* ── SECTION COMMON ── */
+section{padding:100px 5%;position:relative;z-index:1;}
+.section-label{
+  font-size:11px;font-weight:700;color:var(--gold);
+  letter-spacing:.1em;text-transform:uppercase;
+  margin-bottom:14px;
+}
+.section-title{
+  font-size:clamp(26px,4vw,42px);font-weight:900;
+  line-height:1.2;margin-bottom:16px;
+}
+.section-sub{font-size:16px;color:var(--muted);max-width:520px;line-height:1.7;}
+.container{max-width:1100px;margin:0 auto;}
+
+/* ── PROBLEM SECTION ── */
+.problem{background:var(--dark);}
+.problem-inner{
+  display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;
+}
+.problem-text .section-sub{max-width:100%;}
+.problem-list{margin-top:28px;display:flex;flex-direction:column;gap:14px;}
+.problem-item{
+  display:flex;align-items:flex-start;gap:14px;
+  padding:16px 18px;
+  background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:12px;
+  transition:all .25s;
+}
+.problem-item:hover{border-color:rgba(240,165,0,.2);background:rgba(240,165,0,.03);}
+.problem-icon{font-size:20px;flex-shrink:0;margin-top:1px;}
+.problem-item-text strong{display:block;font-size:14px;font-weight:700;margin-bottom:3px;}
+.problem-item-text span{font-size:13px;color:var(--muted);}
+
+.problem-visual{
+  position:relative;
+  background:var(--card);border:1px solid var(--border);border-radius:20px;
+  padding:36px;
+  overflow:hidden;
+}
+.problem-visual::before{
+  content:'';position:absolute;top:-40px;left:-40px;
+  width:200px;height:200px;
+  background:radial-gradient(circle, rgba(240,165,0,.12) 0%, transparent 70%);
+}
+.quote-mark{font-size:80px;color:var(--gold);opacity:.15;line-height:1;margin-bottom:-10px;}
+.quote-text{font-size:17px;font-weight:500;line-height:1.7;margin-bottom:20px;color:var(--text);}
+.quote-source{font-size:12px;color:var(--muted);}
+
+/* ── HOW IT WORKS ── */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:56px;}
+.step{
+  padding:32px 28px;
+  background:var(--card);border:1px solid var(--border);border-radius:16px;
+  position:relative;transition:all .3s;
+}
+.step:hover{border-color:rgba(240,165,0,.25);transform:translateY(-4px);}
+.step-num{
+  font-size:11px;font-weight:800;color:var(--gold);
+  letter-spacing:.1em;margin-bottom:20px;
+  display:flex;align-items:center;gap:8px;
+}
+.step-num::after{content:'';flex:1;height:1px;background:var(--border);}
+.step-icon{font-size:32px;margin-bottom:16px;}
+.step h3{font-size:16px;font-weight:800;margin-bottom:10px;}
+.step p{font-size:13px;color:var(--muted);line-height:1.7;}
+
+/* ── WHY ME ── */
+.why{background:var(--dark);}
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:56px;}
+.why-card{
+  padding:28px;
+  background:var(--card);border:1px solid var(--border);border-radius:14px;
+  display:flex;gap:18px;align-items:flex-start;
+  transition:all .3s;
+}
+.why-card:hover{border-color:rgba(240,165,0,.2);}
+.why-card.featured{
+  grid-column:1 / -1;
+  background:linear-gradient(135deg, rgba(240,165,0,.08) 0%, rgba(240,165,0,.03) 100%);
+  border-color:rgba(240,165,0,.2);
+}
+.why-icon{
+  width:44px;height:44px;border-radius:10px;
+  background:rgba(240,165,0,.1);
+  display:flex;align-items:center;justify-content:center;
+  font-size:20px;flex-shrink:0;
+}
+.why-card h3{font-size:15px;font-weight:800;margin-bottom:6px;}
+.why-card p{font-size:13px;color:var(--muted);line-height:1.65;}
+
+/* ── CTA ── */
+.cta-section{
+  text-align:center;
+  background:
+    radial-gradient(ellipse 70% 80% at 50% 50%, rgba(240,165,0,.07) 0%, transparent 70%);
+}
+.cta-box{
+  max-width:640px;margin:0 auto;
+  padding:72px 48px;
+  background:var(--card);border:1px solid rgba(240,165,0,.15);border-radius:24px;
+  position:relative;overflow:hidden;
+}
+.cta-box::before{
+  content:'YA';
+  position:absolute;bottom:-40px;left:50%;transform:translateX(-50%);
+  font-size:200px;font-weight:900;color:rgba(240,165,0,.03);
+  pointer-events:none;white-space:nowrap;letter-spacing:-8px;
+}
+.cta-box .section-title{margin-bottom:12px;}
+.cta-box .section-sub{margin:0 auto 40px;text-align:center;}
+.contact-links{
+  display:flex;flex-direction:column;gap:14px;align-items:center;
+}
+.contact-link{
+  display:flex;align-items:center;gap:12px;
+  padding:15px 28px;width:100%;max-width:340px;
+  border-radius:12px;text-decoration:none;font-size:15px;font-weight:700;
+  transition:all .25s;
+}
+.contact-link.phone{
+  background:var(--gold);color:#0a0b0f;
+}
+.contact-link.phone:hover{background:var(--gold2);transform:translateY(-2px);box-shadow:0 12px 28px rgba(240,165,0,.3);}
+.contact-link.whatsapp{
+  background:rgba(37,211,102,.1);border:1px solid rgba(37,211,102,.25);color:#25d366;
+}
+.contact-link.whatsapp:hover{background:rgba(37,211,102,.15);transform:translateY(-2px);}
+.contact-link.email{
+  background:rgba(255,255,255,.04);border:1px solid var(--border);color:var(--text);
+}
+.contact-link.email:hover{border-color:rgba(255,255,255,.15);transform:translateY(-2px);}
+.contact-link .icon{font-size:20px;}
+.contact-link span{flex:1;text-align:right;}
+
+/* ── FOOTER ── */
+footer{
+  padding:32px 5%;
+  border-top:1px solid var(--border);
+  display:flex;align-items:center;justify-content:space-between;
+  flex-wrap:wrap;gap:12px;
+}
+.footer-left{font-size:12px;color:var(--muted);}
+.footer-logo{display:flex;align-items:center;gap:8px;}
+.footer-logo .logo-mark{width:28px;height:28px;font-size:11px;border-radius:6px;}
+
+/* ── DIVIDER ── */
+.divider{
+  height:1px;background:linear-gradient(90deg,transparent,var(--border),transparent);
+  margin:0 5%;
+}
+
+/* ── RESPONSIVE ── */
+
+/* ── MOBILE ── */
+@media(max-width:768px){
+  .problem-inner,.steps,.why-grid{grid-template-columns:1fr;}
+  .why-card.featured{grid-column:auto;}
+  nav .nav-title{display:none;}
+
+  nav{padding:14px 5%;}
+  .nav-cta{padding:8px 16px;font-size:12px;}
+
+  .hero{padding:100px 5% 60px;}
+  .hero h1{font-size:36px;}
+  .hero-sub{font-size:15px;}
+  .hero-actions{flex-direction:column;align-items:center;}
+  .btn-primary,.btn-secondary{width:100%;max-width:320px;justify-content:center;}
+
+  .hero-stats{
+    flex-direction:column;margin-top:40px;
+    border-radius:12px;
+  }
+  .hero-stat{
+    border-left:none;border-top:1px solid var(--border);
+    padding:16px;
+  }
+  .hero-stat:first-child{border-top:none;}
+  .hero-stat-num{font-size:22px;}
+
+  section{padding:64px 5%;}
+  .section-title{font-size:26px;}
+  .section-sub{font-size:14px;}
+
+  .step{padding:24px 20px;}
+  .why-card{padding:20px;}
+  .why-card.featured{grid-column:auto;}
+
+  .cta-box{padding:40px 24px;}
+  .cta-box .section-title{font-size:22px;}
+  .contact-link{font-size:14px;padding:13px 20px;}
+
+  .problem-visual{padding:24px;}
+  .quote-text{font-size:15px;}
+  .quote-mark{font-size:60px;}
+
+  footer{flex-direction:column;text-align:center;padding:24px 5%;gap:16px;}
+}
+
+@media(max-width:480px){
+  .hero h1{font-size:30px;}
+  .nav-logo .nav-name{font-size:13px;}
+  .hero-badge{font-size:11px;padding:6px 12px;}
+  .section-title{font-size:22px;}
+  .hero-stat-num{font-size:20px;}
+}
+
+/* ── SCROLL REVEAL ── */
+.reveal{opacity:0;transform:translateY(32px);transition:opacity .7s ease, transform .7s ease;}
+.reveal.visible{opacity:1;transform:none;}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">
+    <div class="logo-mark">YA</div>
+    <div>
+      <div class="nav-name">ירון אמיר</div>
+      <div class="nav-title">שמאי רכוש</div>
+    </div>
+  </div>
+  <a href="tel:0503292066" class="nav-cta">📞 התקשר עכשיו</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-inner">
+    <div class="hero-badge">
+      <span class="hero-badge-dot"></span>
+      שמאי רכוש מוסמך · 15 שנות ניסיון
+    </div>
+    <h1>חברת הביטוח<br>שולחת שמאי שלה —<br><em>שלח אחד משלך.</em></h1>
+    <p class="hero-sub">
+      רוב האנשים מקבלים פחות ממה שמגיע להם — כי לא ידעו שיש להם ברירה.<br>
+      <strong>שמאי מטעמך הוא הברירה.</strong> אני כאן כדי שתקבל את המקסימום.
+    </p>
+    <div class="hero-actions">
+      <a href="tel:0503292066" class="btn-primary">📞 שיחה בחינם</a>
+      <a href="/cdn-cgi/l/email-protection#6b120a1904050a060219535d2b0c060a020745080406" class="btn-secondary">✉️ שלח פנייה</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <div class="hero-stat-num">15+</div>
+        <div class="hero-stat-label">שנות ניסיון</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num">כל הארץ</div>
+        <div class="hero-stat-label">אזורי שירות</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num">24/7</div>
+        <div class="hero-stat-label">זמין לפנייה</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- PROBLEM -->
+<section class="problem">
+  <div class="container">
+    <div class="problem-inner">
+      <div class="problem-text reveal">
+        <div class="section-label">המצב הנפוץ</div>
+        <h2 class="section-title">ניגוד עניינים — זה פשוט מאוד</h2>
+        <p class="section-sub">השמאי שחברת הביטוח שולחת עובד בשבילה, לא בשבילך. זה לא אישי — זה עסקי. אז תפעל בהתאם.</p>
+        <div class="problem-list">
+          <div class="problem-item reveal">
+            <div class="problem-icon">🏢</div>
+            <div class="problem-item-text">
+              <strong>שמאי הביטוח עובד בשבילם</strong>
+              <span>זה תפקידו. הוא לא רע — הוא פשוט לא שלך. לכן כדאי שיהיה לך מישהו שכן</span>
+            </div>
+          </div>
+          <div class="problem-item reveal">
+            <div class="problem-icon">📉</div>
+            <div class="problem-item-text">
+              <strong>הצעות פיצוי שאינן משקפות את המציאות</strong>
+              <span>הערכות נמוכות, חישובי בלאי גבוהים, פריטים שנשמטו — אני יודע היכן לחפש</span>
+            </div>
+          </div>
+          <div class="problem-item reveal">
+            <div class="problem-icon">📝</div>
+            <div class="problem-item-text">
+              <strong>חוות דעת נגדית = כוח מיקוח</strong>
+              <span>חוות דעת מקצועית מטעמך מאפשרת לפתוח משא ומתן ולדרוש את מה שמגיע לך</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="problem-visual reveal">
+        <div class="quote-mark">"</div>
+        <p class="quote-text">
+          קיבלתי הצעה מהביטוח. לא הבנתי אם זה הגיוני. ירון הגיע, בדק, ובסוף קיבלתי כמעט פי שניים ממה שהציעו לי בהתחלה.
+        </p>
+        <div class="quote-source">— לקוח מרוצה, תל אביב</div>
+        <div style="margin-top:28px;padding-top:24px;border-top:1px solid var(--border);">
+          <div style="font-size:12px;color:var(--muted);margin-bottom:10px;">מה אני בודק:</div>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;">
+            <span style="background:rgba(240,165,0,.1);border:1px solid rgba(240,165,0,.2);color:var(--gold);font-size:11px;font-weight:700;padding:5px 12px;border-radius:20px;">נזקי מים</span>
+            <span style="background:rgba(240,165,0,.1);border:1px solid rgba(240,165,0,.2);color:var(--gold);font-size:11px;font-weight:700;padding:5px 12px;border-radius:20px;">צנרת ונזילות</span>
+            <span style="background:rgba(240,165,0,.1);border:1px solid rgba(240,165,0,.2);color:var(--gold);font-size:11px;font-weight:700;padding:5px 12px;border-radius:20px;">שריפות</span>
+            <span style="background:rgba(240,165,0,.1);border:1px solid rgba(240,165,0,.2);color:var(--gold);font-size:11px;font-weight:700;padding:5px 12px;border-radius:20px;">פריצות</span>
+            <span style="background:rgba(240,165,0,.1);border:1px solid rgba(240,165,0,.2);color:var(--gold);font-size:11px;font-weight:700;padding:5px 12px;border-radius:20px;">מס רכוש</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- HOW IT WORKS -->
+<section>
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label">איך זה עובד</div>
+      <h2 class="section-title">פשוט וישיר — שלושה שלבים</h2>
+    </div>
+    <div class="steps">
+      <div class="step reveal">
+        <div class="step-num">01</div>
+        <div class="step-icon">📞</div>
+        <h3>פנה אליי</h3>
+        <p>מתקשר, שולח הודעה או מייל. אנחנו מדברים על הנזק, מה קרה, ואני מסביר בדיוק מה השלבים — בלי התחייבות.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">02</div>
+        <div class="step-icon">🔍</div>
+        <h3>ביקור בנכס</h3>
+        <p>מגיע אליך, בודק את הנזק לעומק, מתעד הכל ומעריך את עלות התיקון האמיתית — לא הזולה ביותר, אלא הנכונה ביותר.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">03</div>
+        <div class="step-icon">📄</div>
+        <h3>חוות דעת + ליווי</h3>
+        <p>מגיש חוות דעת מקצועית מולך מול חברת הביטוח ואם צריך — ממשיך ללוות עד שתקבל את הפיצוי המלא.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- WHY ME -->
+<section class="why">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label">למה אני</div>
+      <h2 class="section-title">ניסיון שרואים בתוצאות</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card featured reveal">
+        <div class="why-icon">⚖️</div>
+        <div>
+          <h3>שמאי מטעמך — לא מטעם הביטוח</h3>
+          <p>זה הדבר החשוב ביותר להבין: חברת הביטוח שולחת שמאי שעובד בשבילה. אני עובד אך ורק בשבילך. האינטרס שלי הוא שתקבל את המקסימום שמגיע לך לפי הפוליסה.</p>
+        </div>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-icon">🎯</div>
+        <div>
+          <h3>15 שנות ניסיון בשטח</h3>
+          <p>מכיר את השיטות, את הנהלים, ואת הנקודות שחברות הביטוח מנסות להחמיץ.</p>
+        </div>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-icon">🗣️</div>
+        <div>
+          <h3>ישיר ואנושי</h3>
+          <p>לא שפה טכנית ולא ריחוק מקצועי. מסביר הכל בפשטות ונשאר זמין לאורך כל התהליך.</p>
+        </div>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-icon">🇮🇱</div>
+        <div>
+          <h3>כל הארץ</h3>
+          <p>מגיע לכל מקום בארץ. נזק לא בוחר מיקום — ואני גם לא.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-box reveal">
+      <div class="section-label" style="text-align:center;">מוכן להתחיל?</div>
+      <h2 class="section-title">אל תחתמו על כלום לפני שנדברנו</h2>
+      <p class="section-sub">לפני שאתם מסכימים להצעת הביטוח — תנו לי להסתכל עליה. שיחה ראשונה בחינם.</p>
+      <div class="contact-links">
+        <a href="tel:0503292066" class="contact-link phone">
+          <span class="icon">📞</span>
+          <span>050-3292066</span>
+        </a>
+        <a href="#whatsapp" class="contact-link whatsapp" style="opacity:.6;cursor:not-allowed;" title="בקרוב">
+          <span class="icon">💬</span>
+          <span>וואטסאפ — בקרוב</span>
+        </a>
+        <a href="/cdn-cgi/l/email-protection#057c64776a6b64686c773d33456268646c692b666a68" class="contact-link email">
+          <span class="icon">✉️</span>
+          <span><span class="__cf_email__" data-cfemail="2d544c5f42434c40445f151b6d4a404c4441034e4240">[email&#160;protected]</span></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-left">
+    © 2025 ירון אמיר · שמאי רכוש · בת-ים
+  </div>
+  <div class="footer-logo">
+    <div class="logo-mark">YA</div>
+    <div style="font-size:12px;color:var(--muted);">Yaron Amir · Property Appraiser</div>
+  </div>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+// Scroll reveal
+const observer 
